@@ -1,21 +1,22 @@
 Summary:	mutt-misc font
 Summary(pl):	Font mutt-misc
 Name:		xorg-font-font-mutt-misc
-Version:	0.99.0
-Release:	0.01
+Version:	0.99.1
+Release:	0.1
 License:	MIT
 Group:		Fonts
-Source0:	http://xorg.freedesktop.org/X11R7.0-RC0/font/font-mutt-misc-%{version}.tar.bz2
-# Source0-md5:	721dd9eb39f5ecce4c4e179db3466ff1
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/font/font-mutt-misc-%{version}.tar.bz2
+# Source0-md5:	ffe1bf4a8898702f34e20bf52c917605
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-app-bdftopcf
 BuildRequires:	xorg-app-mkfontdir
 BuildRequires:	xorg-app-mkfontscale
-BuildRequires:	xorg-font-font-util
 BuildRequires:	xorg-util-util-macros
+Requires(post,postun):	fontpostinst
+Requires:	%{_fontsdir}/misc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -31,7 +32,8 @@ Font mutt-misc.
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure
+%configure \
+	--with-fontdir=%{_fontsdir}/misc
 
 %{__make}
 
@@ -44,6 +46,13 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post
+fontpostinst misc
+
+%postun
+fontpostinst misc
+
 %files
 %defattr(644,root,root,755)
-%{_libdir}/X11/fonts/misc/*
+%doc COPYING ChangeLog README
+%{_fontsdir}/misc/*.pcf.gz
