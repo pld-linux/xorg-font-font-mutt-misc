@@ -1,16 +1,15 @@
 Summary:	mutt-misc font
 Summary(pl):	Font mutt-misc
 Name:		xorg-font-font-mutt-misc
-Version:	0.99.1
+Version:	1.0.0
 Release:	0.1
 License:	MIT
 Group:		Fonts
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/font/font-mutt-misc-%{version}.tar.bz2
-# Source0-md5:	ffe1bf4a8898702f34e20bf52c917605
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/font/font-mutt-misc-%{version}.tar.bz2
+# Source0-md5:	648b409b7eb78ad1cd5f6d7fac3eef88
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
-BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-app-bdftopcf
 BuildRequires:	xorg-app-mkfontdir
 BuildRequires:	xorg-app-mkfontscale
