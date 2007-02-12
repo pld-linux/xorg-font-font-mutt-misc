@@ -1,5 +1,5 @@
 Summary:	mutt-misc font
-Summary(pl):	Font mutt-misc
+Summary(pl.UTF-8):   Font mutt-misc
 Name:		xorg-font-font-mutt-misc
 Version:	1.0.0
 Release:	0.1
@@ -21,7 +21,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 mutt-misc font.
 
-%description -l pl
+%description -l pl.UTF-8
 Font mutt-misc.
 
 %prep
