@@ -1,12 +1,12 @@
 Summary:	MUTT ClearlyU bitmap fonts
 Summary(pl.UTF-8):	Fonty bitmapowe MUTT ClearlyU
 Name:		xorg-font-font-mutt-misc
-Version:	1.0.0
-Release:	2
+Version:	1.0.1
+Release:	1
 License:	MIT
 Group:		Fonts
 Source0:	http://xorg.freedesktop.org/releases/individual/font/font-mutt-misc-%{version}.tar.bz2
-# Source0-md5:	648b409b7eb78ad1cd5f6d7fac3eef88
+# Source0-md5:	aab7ac62b960e77aa11d032bafe1d460
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -35,6 +35,8 @@ Devangari i Ligature.
 %{__autoconf}
 %{__automake}
 %configure \
+	--build=%{_host_platform} \
+	--host=%{_host_platform} \
 	--with-fontdir=%{_fontsdir}/misc
 
 %{__make}
