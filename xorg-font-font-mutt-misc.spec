@@ -1,12 +1,12 @@
 Summary:	MUTT ClearlyU bitmap fonts
 Summary(pl.UTF-8):	Fonty bitmapowe MUTT ClearlyU
 Name:		xorg-font-font-mutt-misc
-Version:	1.0.1
+Version:	1.0.2
 Release:	1
 License:	MIT
 Group:		Fonts
 Source0:	http://xorg.freedesktop.org/releases/individual/font/font-mutt-misc-%{version}.tar.bz2
-# Source0-md5:	aab7ac62b960e77aa11d032bafe1d460
+# Source0-md5:	8296972a99f96600d435d157fccc1501
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
